@@ -26,7 +26,7 @@ double selectionFunction(int sel, float xvalue){
 void main(){
 	//Dichiarazioni variabili
 	int rettversion, selfuntion, selmethod;
-	double a, b, h, area, n;
+	double a, b, h, area, n, i;
 	//Input
 	printf("Scegli la funzione:\n 1 - f(x)=x^2\n");
 	printf("La tua selezione: ");
@@ -55,7 +55,7 @@ void main(){
 		case 1: //Metodo dei rettangoli
 			switch(rettversion){
 				case 1: //Metodo dei rettangoli variante iniziando dal primo valore
-					for(double i=0; i <= (n-1); i++){
+					for(i=0; i <= (n-1); i++){
 						printf("i, n, h, a = %f, %d, %f, %f\n", i, n, h, a);
 						printf("X = %f\n", i*h+a);
 						area += h*selectionFunction(selfuntion, i*h+a);
@@ -64,7 +64,7 @@ void main(){
 				break;
 				
 				case 2://Metodo dei rettangoli variante iniziando dal secondo valore
-					for(int i=1; i <= n; i++){
+					for(i=1; i <= n; i++){
 						area += h*selectionFunction(selfuntion, i*h+a);
 					}
 				break;
