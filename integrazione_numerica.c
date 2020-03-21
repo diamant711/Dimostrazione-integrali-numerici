@@ -41,25 +41,25 @@ void main(){
 	}
 	printf("Ora definisci il limite inferiore dell'integrale:\n");
 	printf("a =  ");
-	scanf("%f", &a);
+	scanf("%lf", &a);
 	printf("Ora definisci il limite superiore dell'integrale:\n");
 	printf("b =  ");
-	scanf("%f", &b);
+	scanf("%lf", &b);
 	printf("Ora definisci il numero dei passi:\n");
 	printf("n =  ");
-	scanf("%f", &n);
+	scanf("%lf", &n);
 	//Calcolo
 	h = (b - a)/n; //h = lunghezza del passo
-	printf("h = %f, a = %f\n", h, a);
+	printf("h = %lf, a = %lf\n", h, a);
 	switch(selmethod){
 		case 1: //Metodo dei rettangoli
 			switch(rettversion){
 				case 1: //Metodo dei rettangoli variante iniziando dal primo valore
 					for(i=0; i <= (n-1); i++){
-						printf("i, n, h, a = %f, %d, %f, %f\n", i, n, h, a);
-						printf("X = %f\n", i*h+a);
+						printf("i, n, h, a = %lf, %lf, %ff, %ff\n", i, n, h, a);
+						printf("X = %lf\n", i*h+a);
 						area += h*selectionFunction(selfuntion, i*h+a);
-						printf("step area =%f\n", area);
+						printf("step area =%lf\n", area);
 					}
 				break;
 				
@@ -87,5 +87,5 @@ void main(){
 			printf("Errore selezione del metodo invalida.");
 		break;
 	}
-	printf("area = %f\n", area);
+	printf("area = %ff\n", area);
 }
