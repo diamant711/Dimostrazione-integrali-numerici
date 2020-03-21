@@ -82,5 +82,5 @@ void main(){
 			printf("Errore selezione del metodo invalida.");
 		break;
 	}
-	printf("area = %lf\n", area);
+	printf("Area = %lf\n", area);
 }
