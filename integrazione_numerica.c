@@ -3,8 +3,6 @@
  * al variare di n, date funzioni pre-integrate
 */
 
-//ciao
-
 #include <stdio.h>
 #include <math.h>
 
@@ -23,7 +21,7 @@ double selectionFunction(int sel, float xvalue){
 	}
 }
 
-//Main lol
+//Main
 
 void main(){
 	//Dichiarazioni variabili
@@ -58,7 +56,7 @@ void main(){
 			switch(rettversion){
 				case 1: //Metodo dei rettangoli variante iniziando dal primo valore
 					for(i=0; i <= (n-1); i++){
-						printf("i, n, h, a = %lf, %lf, %ff, %ff\n", i, n, h, a);
+						printf("i, n, h, a = %lf, %lf, %lf, %lf\n", i, n, h, a);
 						printf("X = %lf\n", i*h+a);
 						area += h*selectionFunction(selfuntion, i*h+a);
 						printf("step area =%lf\n", area);
@@ -89,5 +87,5 @@ void main(){
 			printf("Errore selezione del metodo invalida.");
 		break;
 	}
-	printf("area = %ff\n", area);
+	printf("area = %lf\n", area);
 }
