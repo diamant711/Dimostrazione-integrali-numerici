@@ -3,6 +3,8 @@
  * al variare di n, date funzioni pre-integrate
 */
 
+//ciao
+
 #include <stdio.h>
 #include <math.h>
 
