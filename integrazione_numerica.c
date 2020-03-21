@@ -23,7 +23,7 @@ double selectionFunction(int sel, float xvalue){
 	}
 }
 
-//Main
+//Main lol
 
 void main(){
 	//Dichiarazioni variabili
