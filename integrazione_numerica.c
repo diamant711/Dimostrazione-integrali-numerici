@@ -49,7 +49,7 @@ void main(){
 	printf("n =  ");
 	scanf("%f", &n);
 	//Calcolo
-	h = (b - a)/h; //h = lunghezza del passo
+	h = (b - a)/n; //h = lunghezza del passo
 	switch(selmethod){
 		case 1: //Metodo dei rettangoli
 			printf("ok1");
