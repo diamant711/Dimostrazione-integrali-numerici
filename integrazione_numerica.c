@@ -11,7 +11,6 @@
 double selectionFunction(int sel, float xvalue){
 	switch(sel){
 		case 1:
-			printf("return %f\n", xvalue*xvalue);
 			return xvalue*xvalue;
 		break;
 		
@@ -50,16 +49,12 @@ void main(){
 	scanf("%lf", &n);
 	//Calcolo
 	h = (b - a)/n; //h = lunghezza del passo
-	printf("h = %lf, a = %lf\n", h, a);
 	switch(selmethod){
 		case 1: //Metodo dei rettangoli
 			switch(rettversion){
 				case 1: //Metodo dei rettangoli variante iniziando dal primo valore
 					for(i=0; i <= (n-1); i++){
-						printf("i, n, h, a = %lf, %lf, %lf, %lf\n", i, n, h, a);
-						printf("X = %lf\n", i*h+a);
 						area += h*selectionFunction(selfuntion, i*h+a);
-						printf("step area =%lf\n", area);
 					}
 				break;
 				
