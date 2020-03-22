@@ -15,7 +15,7 @@ double selectionFunction(int sel, float xvalue){
 		break;
 		
 		default:
-			printf("Errore! selezione della funzione invalida.");
+			printf("exit Error");
 		break;
 	}
 }
@@ -27,16 +27,34 @@ void main(){
 	int rettversion, selfunction, selmethod;
 	double a, b, h, area, n, i;
 	//Input
-	printf("Scegli la funzione:\n 1 - f(x)=x^2\n");
-	printf("La tua selezione: ");
-	scanf("%d", &selfunction);
-	printf("Ora inserisci il metodo di integrazione numerica:\n 1 - Metodo dei rettangoli\n");
-	printf("La tua selezione: ");
-	scanf("%d", &selmethod);
-	if(selmethod == 1){
-		printf("Dato che hai scelto il metodo dei rettangoli indica quale variante desideri:\n 1 - Partenza dal primo valore\n 2 - Partenza dal secondo valore\n");
+	while(1){
+		printf("Scegli la funzione:\n 1 - f(x)=x^2\n");
 		printf("La tua selezione: ");
-		scanf("%d", &rettversion);
+		scanf("%d", &selfunction);
+		if((selfunction >= 1)&&(selfunction <= 1))
+			break;
+		else
+			printf("***Input non valido***\n\n");
+	}
+	while(1){
+		printf("Ora inserisci il metodo di integrazione numerica:\n 1 - Metodo dei rettangoli\n");
+		printf("La tua selezione: ");
+		scanf("%d", &selmethod);
+		if((selmethod >= 1)&&(selmethod <= 3))
+			break;
+		else
+			printf("***Input non valido***\n\n");
+	}
+	if(selmethod == 1){
+		while(1){
+			printf("Dato che hai scelto il metodo dei rettangoli indica quale variante desideri:\n 1 - Partenza dal primo valore\n 2 - Partenza dal secondo valore\n");
+			printf("La tua selezione: ");
+			scanf("%d", &rettversion);
+			if((rettversion >= 1)&&(rettversion <= 2))
+				break;
+			else
+				printf("***Input non valido***\n\n");
+		}
 	}
 	printf("Ora definisci il limite inferiore dell'integrale:\n");
 	printf("a =  ");
@@ -65,7 +83,7 @@ void main(){
 				break;
 				
 				default:
-					printf("Errore! selezione della variante del metodo dei rettangoli invalida.");
+					printf("exit Error");
 				break;
 			}
 		break;
@@ -79,7 +97,7 @@ void main(){
 		break;
 		
 		default:
-			printf("Errore selezione del metodo invalida.");
+			printf("exit Error");
 		break;
 	}
 	printf("Area = %lf\n", area);
