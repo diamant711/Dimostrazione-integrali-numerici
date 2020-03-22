@@ -29,7 +29,7 @@ void main(){
 	//Input
 	printf("Scegli la funzione:\n 1 - f(x)=x^2\n");
 	printf("La tua selezione: ");
-	scanf("%d", &selfuntion);
+	scanf("%d", &selfunction);
 	printf("Ora inserisci il metodo di integrazione numerica:\n 1 - Metodo dei rettangoli\n");
 	printf("La tua selezione: ");
 	scanf("%d", &selmethod);
