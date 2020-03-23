@@ -37,7 +37,7 @@ void main(){
 			printf("***Input non valido***\n\n");
 	}
 	while(1){
-		printf("Ora inserisci il metodo di integrazione numerica:\n 1 - Metodo dei rettangoli\n");
+		printf("Ora inserisci il metodo di integrazione numerica:\n 1 - Metodo dei rettangoli\n 2 - Metodo dei trapezi\n");
 		printf("La tua selezione: ");
 		scanf("%d", &selmethod);
 		if((selmethod >= 1)&&(selmethod <= 3))
@@ -89,7 +89,13 @@ void main(){
 		break;
 		
 		case 2: //Metodo dei trapezi
-			
+			for(i=0; i <= (n-1); i++){
+				area += h*selectionFunction(selfunction, i*h+a);
+			}
+			for(i=1; i <= n; i++){
+				area += h*selectionFunction(selfunction, i*h+a);
+			}
+			area /= 2;
 		break;
 		
 		case 3: //Metodo delle parabole
