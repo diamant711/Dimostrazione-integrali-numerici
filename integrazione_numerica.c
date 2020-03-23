@@ -114,5 +114,5 @@ void main(){
 			printf("exit Error");
 		break;
 	}
-	printf("Area = %lf\n", area);
+	printf("Integrale definito approssimato = %lf\n", area);
 }
