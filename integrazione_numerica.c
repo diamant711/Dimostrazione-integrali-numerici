@@ -24,8 +24,8 @@ double selectionFunction(int sel, float xvalue){
 
 void main(){
 	//Dichiarazioni variabili
-	int rettversion, selfunction, selmethod;
-	double a, b, h, area, n, i;
+	int rettversion, selfunction, selmethod, i;
+	double a, b, h, area, n;
 	//Input
 	while(1){
 		printf("Scegli la funzione:\n 1 - f(x)=x^2\n");
@@ -37,7 +37,7 @@ void main(){
 			printf("***Input non valido***\n\n");
 	}
 	while(1){
-		printf("Ora inserisci il metodo di integrazione numerica:\n 1 - Metodo dei rettangoli\n 2 - Metodo dei trapezi\n");
+		printf("Ora inserisci il metodo di integrazione numerica:\n 1 - Metodo dei rettangoli\n 2 - Metodo dei trapezi\n 3 - Metodo delle parabole\n");
 		printf("La tua selezione: ");
 		scanf("%d", &selmethod);
 		if((selmethod >= 1)&&(selmethod <= 3))
@@ -99,7 +99,15 @@ void main(){
 		break;
 		
 		case 3: //Metodo delle parabole
-			
+			for(i=0; i <= n; i++){
+				if((i==0)&&(i==n))
+					area += selectionFunction(selfunction, i*h+a);
+				if((i % 2) == 0)
+					area += 2*selectionFunction(selfunction, i*h+a);
+				if((i % 2) == 1)
+					area += 4*selectionFunction(selfunction, i*h+a);
+			}
+			area *= h/3;
 		break;
 		
 		default:
