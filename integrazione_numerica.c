@@ -35,6 +35,7 @@ void main(){
 			break;
 		else
 			printf("***Input non valido***\n\n");
+		fflush(stdin);		
 	}
 	while(1){
 		printf("Ora inserisci il metodo di integrazione numerica:\n 1 - Metodo dei rettangoli\n 2 - Metodo dei trapezi\n 3 - Metodo delle parabole\n");
@@ -44,6 +45,7 @@ void main(){
 			break;
 		else
 			printf("***Input non valido***\n\n");
+		fflush(stdin);
 	}
 	if(selmethod == 1){
 		while(1){
@@ -54,6 +56,7 @@ void main(){
 				break;
 			else
 				printf("***Input non valido***\n\n");
+		fflush(stdin);
 		}
 	}
 	printf("Ora definisci il limite inferiore dell'integrale:\n");
